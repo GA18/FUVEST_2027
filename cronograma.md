@@ -1,90 +1,50 @@
-# Cronograma de estudo — FUVEST 2027
+# Cronograma — FUVEST 2027
 
-## Premissa
+**1ª fase:** 01/11/2026 | **2ª fase:** 06 e 07/12/2026 | **Inscrições:** 17/08 a 09/10/2026
 
-- Cronograma flexível, 12 semanas até a 1ª fase (01/11/2026).
-- Foco: núcleo comum, literatura obrigatória, redação e revisão.
-- Use os checklists em `conteudo.md` de cada matéria.
+## Estratégia geral
+- ~3 meses de preparação (agosto → outubro)
+- Foco em **núcleo comum** + **resolução de questões** + **redação**
+- Use `conteudo.md` de cada matéria como checklist
+- Consulte `materials.md` para recursos (YouTube, livros, exercícios)
 
-## Datas importantes
+---
 
-- Inscrições: 17/08/2026 a 09/10/2026
-- 1ª fase: 01/11/2026 (80 questões de múltipla escolha)
-- 2ª fase: 06 e 07/12/2026 (provas discursivas + redação)
+## Mês 1 — Fundamentos (agosto/setembro)
+| Semana | Foco principal |
+|--------|----------------|
+| 1 | Diagnóstico + organização (ler programa oficial e guia de provas) |
+| 2 | Matemática: Álgebra + Funções |
+| 3 | Português: Interpretação + Gramática |
+| 4 | Biologia: Célula, Genética, Ecologia |
+| 5 | Física: Cinemática + Dinâmica |
 
-## Prioridade de estudo
+## Mês 2 — Aprofundamento (setembro/outubro)
+| Semana | Foco principal |
+|--------|----------------|
+| 6 | Química: Estrutura atômica + Reações |
+| 7 | História: Brasil Colônia → República |
+| 8 | Geografia: Espaço + Meio ambiente + Economia |
+| 9 | Funções avançadas + Geometria + Estatística |
+| 10 | Literatura: leitura e fichamento das 9 obras |
 
-1. núcleo comum
-2. fundamentos essenciais
-3. resolução de questões
-4. revisão por erros
-5. modelos e simulados
-6. literatura obrigatória
-7. redação e estrutura da 2ª fase
+## Mês 3 — Revisão + Simulados (outubro)
+| Semana | Foco principal |
+|--------|----------------|
+| 11 | Filosofia + Sociologia + Inglês |
+| 12 | Simulados de 1ª fase (resolução completa) |
+| 13 | Reforço nos pontos fracos + Redação |
 
-## Semana 1 — Diagnóstico
-- Revisar o programa oficial e o guia de provas.
-- Diagnóstico de Português, Matemática e redação.
-- Mapear lacunas.
+---
 
-## Semana 2 — Fundamentos
-- Matemática: álgebra, funções e geometria.
-- Português: leitura, textos e coesão.
-- Redação: proposta, tese e estrutura.
+## Rotina semanal sugerida
+- **Seg-Sex:** 2-3h de estudo por dia (1 matéria diferente por dia)
+- **Sábado:** Resolução de provas anteriores (meio dia)
+- **Domingo:** Revisão de anotações + leitura de literatura
 
-## Semana 3 — Ciências da Natureza
-- Física e Química.
-- Português: leitura crítica e gramática.
-- Redação: argumentação e fontes.
-
-## Semana 4 — Biologia e Geografia
-- Biologia e Geografia.
-- Matemática: geometria e estatística.
-- Literatura obrigatória: primeira leitura.
-
-## Semana 5 — Humanas e Inglês
-- História, Filosofia e Sociologia.
-- Inglês: leitura e interpretação.
-- Redação: revisão de modelos.
-
-## Semana 6 — Revisão integrada
-- Revisão integrada das áreas.
-- Matemática: fixação de erros.
-- Literatura obrigatória: análise por obra.
-
-## Semana 7 — Linguagens
-- Arte, Educação Física e Inglês.
-- Revisão de Ciências da Natureza.
-- Redação: prática com temas.
-
-## Semana 8 — Simulado parcial
-- Segunda rodada de revisão por áreas.
-- Simulado parcial de 1ª fase.
-- Literatura obrigatória: fichamento.
-
-## Semana 9 — 2ª fase
-- Revisão de provas discursivas da 2ª fase.
-- Redação: treino com texto argumentativo.
-- Matemática e Ciências: reforço de temas difíceis.
-
-## Semana 10 — Reforço
-- Reforço de pontos fracos.
-- Revisão geral de Humanas e Linguagens.
-- Literatura obrigatória: fechamento de análises.
-
-## Semana 11 — Simulado completo
-- Simulado completo de 1ª fase.
-- Revisão de redação e temas de maior erro.
-- Manutenção de conteúdos de 2ª fase.
-
-## Semana 12 — Revisão final
-- Revisão final geral.
-- Trabalho com textos e argumentação.
-- Redação e literatura obrigatória em foco final.
-
-## Dica prática
-
-- Divida a semana em blocos de estudo por área.
-- Reserve tempo para revisão de erros.
-- Revise literatura e redação em blocos específicos.
-- Mantenha o cronograma flexível conforme a evolução da rotina.
+## Regras práticas
+1. Comece pelo que tem mais peso e mais lacunas
+2. Resolva FUVESTs anteriores (últimos 5 anos)
+3. Escreva 1 redação por semana (mínimo)
+4. Revise literatura em blocos curtos (2 obras por semana)
+5. Cronograma é flexível — adapte ao seu ritmo

@@ -1,0 +1,12 @@
+# Álgebra
+- [ ] Produtos notáveis
+- [ ] Fatoração
+- [ ] Equações do 1º e 2º grau
+- [ ] Equações do 3º grau
+- [ ] Sistemas de equações lineares (até 3 equações)
+- [ ] Inequações
+- [ ] Expressões algébricas
+- [ ] Potenciação e radiciação
+- [ ] Notação científica
+- [ ] Progressões aritméticas (PA)
+- [ ] Progressões geométricas (PG)

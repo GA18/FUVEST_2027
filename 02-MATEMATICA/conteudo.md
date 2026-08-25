@@ -1,31 +1,41 @@
-# Matemática
+# 02 — MATEMÁTICA E CÓDIGOS
 
-## Álgebra
-- [ ] produtos notáveis
-- [ ] fatoração
-- [ ] equações
-- [ ] inequações
-- [ ] sistemas lineares
-- [ ] potências e radiciação
+Área composta por 4 grandes blocos temáticos. Na 1ª fase, questões de múltipla escolha focadas em aplicação e resolução de problemas.
 
-## Funções
-- [ ] conceito de função
-- [ ] função afim
-- [ ] função quadrática
-- [ ] função exponencial
-- [ ] função logarítmica
-- [ ] gráficos e interpretação
+## Blocos
 
-## Geometria
-- [ ] geometria analítica
-- [ ] reta e circunferência
-- [ ] geometria plana
-- [ ] geometria espacial
-- [ ] semelhança e transformações
+### Álgebra
+→ ver `algebra/conteudo.md`
+- Produtos notáveis, fatoração
+- Equações (1º, 2º, 3º grau)
+- Sistemas de equações
+- Inequações
+- Progressões (PA e PG)
 
-## Estatística e probabilidade
-- [ ] contagem
-- [ ] probabilidade
-- [ ] análise de dados
-- [ ] interpretação de gráficos e tabelas
-- [ ] média, mediana e moda
+### Funções
+→ ver `funcoes/conteudo.md`
+- Afim, quadrática, exponencial, logarítmica
+- Trigonométrica e modular
+- Composição e inversa
+- Transformações
+
+### Geometria
+→ ver `geometria/conteudo.md`
+- Analítica, plana e espacial
+- Trigonometria
+- Transformações geométricas
+
+### Estatística e Probabilidade
+→ ver `estatistica/conteudo.md`
+- Contagem, arranjos, permutações, combinações
+- Probabilidade
+- Estatística descritiva
+- Gráficos e interpretação
+
+---
+
+## Dicas de prova (1ª fase)
+- 80 questões de múltipla escolha, tempo de 4 horas.
+- Questões de raciocínio lógico, não apenas decoreba.
+- Resolver provas anteriores é o melhor preparo.
+- Calcular tempo médio por questão (~3 minutos).

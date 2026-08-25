@@ -1,0 +1,15 @@
+# Estatística e Probabilidade
+- [ ] Princípio fundamental da contagem
+- [ ] Princípios aditivo e multiplicativo
+- [ ] Diagrama de árvore
+- [ ] Arranjos, permutações e combinações
+- [ ] Espaços amostrais
+- [ ] Probabilidade de eventos equiprováveis
+- [ ] Média, mediana e moda
+- [ ] Quartis, decis e percentis
+- [ ] Amplitude, variância e desvio padrão
+- [ ] Coeficiente de variação
+- [ ] Histograma, box-plot, ramos e folhas
+- [ ] Polígono de frequência
+- [ ] Pesquisa amostral
+- [ ] Interpretação de gráficos e tabelas

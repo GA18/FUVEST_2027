@@ -1,25 +1,30 @@
-# Literatura obrigatória
+# Literatura — Obras obrigatórias 2027
 
-## Obras confirmadas
-- [ ] Opúsculo Humanitário — Nísia Floresta
-- [ ] Nebulosas — Narcisa Amália
-- [ ] Memórias de Martha — Julia Lopes de Almeida
-- [ ] Caminho de Pedras — Rachel de Queiroz
-- [ ] A Paixão Segundo G.H. — Clarice Lispector
-- [ ] Geografia — Sophia de Mello Breyner Andresen
-- [ ] Balada de Amor ao Vento — Paulina Chiziane
-- [ ] Canção para Ninar Menino Grande — Conceição Evaristo
-- [ ] A Visão das Plantas — Djaimilia Pereira de Almeida
+## Obras confirmadas (mulheres na literatura brasileira)
+- [ ] **Opúsculo Humanitário** — Nísia Floresta (século XIX, séc. XIX)
+- [ ] **Nebulosas** — Narcisa Amália (Arcadismo/Pre-romantismo)
+- [ ] **Memórias de Martha** — Julia Lopes de Almeida (Naturalismo/Realismo)
+- [ ] **Caminho de Pedras** — Rachel de Queiroz (Regionalismo nordestino)
+- [ ] **A Paixão Segundo G.H.** — Clarice Lispector (Modernismo)
+- [ ] **Geografia** — Sophia de Mello Breyner Andresen (Modernismo/Neoconcretismo)
+- [ ] **Balada de Amor ao Vento** — Paulina Chiziane (Literatura africana)
+- [ ] **Canção para Ninar Menino Grande** — Conceição Evaristo (Literatura afro-brasileira)
+- [ ] **A Visão das Plantas** — Djaimilia Pereira de Almeida (Contemporâneo)
 
-## Checklist de leitura
-- [ ] leitura geral da obra
-- [ ] identificação de tema principal
-- [ ] personagens, conflitos e contexto
-- [ ] relação com o período e a autoria
+## Checklist de estudo por obra
+- [ ] leitura completa da obra
+- [ ] ficha bibliográfica (autor, data, gênero, corrente literária)
+- [ ] sinopse / resumo
+- [ ] tema(s) principal(is)
+- [ ] personagens e conflitos
+- [ ] contexto histórico e cultural da autora
 - [ ] análise de linguagem e estilo
-- [ ] preparação para questão discursiva e interpretação
+- [ ] relação com a corrente literária
+- [ ] questão discursiva provável
 
-## Orientação
-- [ ] organizar fichas por obra
-- [ ] revisar temas recorrentes
-- [ ] praticar análise em contexto de prova
+## Competências exigidas
+- [ ] reconhecimento de gêneros e correntes literárias
+- [ ] interpretação de textos literários em contexto
+- [ ] análise do papel da mulher na literatura
+- [ ] relação entre literatura e identidade cultural
+- [ ] leitura de poesia e prosa
