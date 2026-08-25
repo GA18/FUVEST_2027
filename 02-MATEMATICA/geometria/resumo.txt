@@ -1,0 +1,9 @@
+# Geometria
+
+- geometria analítica
+- reta e circunferência
+- áreas e perímetros
+- geometria espacial
+- semelhança
+- transformações geométricas
+

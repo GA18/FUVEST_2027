@@ -1,0 +1,7 @@
+# Matemática
+
+- álgebra
+- funções
+- geometria
+- estatística e probabilidade
+- revisão por erro

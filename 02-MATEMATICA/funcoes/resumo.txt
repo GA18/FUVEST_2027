@@ -1,0 +1,10 @@
+# Funções
+
+- conceito
+- domínio e imagem
+- afim
+- quadrática
+- exponencial
+- logarítmica
+- gráficos e interpretação
+

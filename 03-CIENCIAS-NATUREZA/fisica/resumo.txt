@@ -1,0 +1,6 @@
+# Física
+
+- fundamentos
+- mecânica
+- termodinâmica e ondas
+- revisão por erro
