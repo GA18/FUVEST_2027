@@ -19,7 +19,7 @@
 - [ ] biomas brasileiros (Amazônia, Mata Atlântica, Cerrado, Caatinga, Pampa, Pantanal)
 
 ## Sociedade e cultura
-- [ ] popuração e demografia (crescimento, transição demográfica)
+- [ ] população e demografia (crescimento, transição demográfica)
 - [ ] urbanização no Brasil e no mundo
 - [ ] mobilidade espacial (migração, deslocamentos pendulares)
 - [ ] diversidade cultural (etnias, línguas, religiões)

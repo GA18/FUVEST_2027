@@ -2,11 +2,17 @@
 
 ## Como usar
 
-1. Escolha uma matéria em `01-LINGUAGENS/`, `02-MATEMATICA/`, `03-CIENCIAS-NATUREZA/` ou `04-CIENCIAS-HUMANAS/`
-2. Abra `conteudo.md` — checklist de tópicos
-3. Abra `materials.md` — recursos reais (YouTube, livros, sites)
-4. Estude e anote em `resumo.txt`
-5. Marque o item como `[x]` em `conteudo.md`
+1. Abra `dashboard/html/index.html` no navegador — dashboard de progresso interativo
+2. Escolha uma matéria em `01-LINGUAGENS/`, `02-MATEMATICA/`, `03-CIENCIAS-NATUREZA/` ou `04-CIENCIAS-HUMANAS/`
+3. Abra `conteudo.md` — checklist de tópicos
+4. Estude e marque o item como `[x]` em `conteudo.md`
+5. Para atualizar o dashboard: `python3 dashboard/py/dashboard.py` e recarregue o `index.html`
+
+### Dashboard
+- `dashboard/html/` — HTML gerado
+- `dashboard/css/` — estilos
+- `dashboard/py/` — script gerador
+- Para regenerar: `python3 dashboard/py/dashboard.py`
 
 ## Estrutura
 
@@ -36,6 +42,10 @@ FUVEST_2027/
 │   ├── geografia/
 │   ├── filosofia/
 │   └── sociologia/
+├── dashboard/               → dashboard de progresso
+│   ├── html/index.html
+│   ├── css/style.css
+│   └── py/dashboard.py
 ├── cronograma.md            → plano de estudo (3 meses)
 ├── fuvest2027_programa.txt  → programa oficial (DOWNLOAD)
 ├── guia_provas_2027.txt     → guia oficial da prova

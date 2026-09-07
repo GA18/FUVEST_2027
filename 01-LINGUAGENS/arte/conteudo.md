@@ -7,7 +7,7 @@
 - [ ] Forma
 - [ ] Cor
 - [ ] Textura
-- [ ] volume
+- [ ] Volume
 - [ ] Ponto
 - [ ] Espaço
 - [ ] Movimento
@@ -74,7 +74,7 @@
 - [ ] História da música
 - [ ] Música erudita
 - [ ] Música popular brasileira (MPB)
-- [ ] Relação com其他 artes
+- [ ] Relação com outras artes
 
 ### 9. Teatro
 - [ ] Elementos cênicos

@@ -1,17 +1,17 @@
 # História
 
 ## Brasil Colônia (1500-1822)
-- [ ] colonização portuguesa (exploração, adminração, escravidão)
+- [ ] colonização portuguesa (exploração, administração, escravidão)
 - [ ] sistema colonial e capitanias hereditárias
 - [ ] economia açucareira, mineradora e pecuária
 - [ ] resistências indígenas e africanas
-- [ ] conspiracy e Inconfidência Mineira
+- [ ] conspiração e Inconfidência Mineira
 
 ## Brasil Imperial (1822-1889)
 - [ ] independência e constituições
 - [ ] economia cafeeira e imigração
 - [ ] escravidão e abolicionismo (Lei Áurea)
-- [ ] Segundo Reinando (centralização, Modernização)
+- [ ] Segundo Reinado (centralização, Modernização)
 - [ ] Guerra do Paraguai
 
 ## Brasil República (1889-presente)

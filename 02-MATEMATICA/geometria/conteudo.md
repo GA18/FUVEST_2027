@@ -18,7 +18,6 @@
 - [ ] Teorema de Pitágoras
 - [ ] área de triângulos, paralelogramos, trapézios, círculos
 - [ ] polígonos regulares e seus elementos
-- [ ] Teorema de Tales (proporção em triângulos)
 
 ## Geometria espacial
 - [ ] sólidos geométricos (prismas, pirâmides, cilindro, cone, esfera)

@@ -11,7 +11,7 @@
 - [ ] ligação iônica
 - [ ] ligação covalente (polar e apolar)
 - [ ] ligação metálica
-- [ ]-force de van der Waals e pontes de hidrogênio
+- [ ] forças de van der Waals e pontes de hidrogênio
 - [ ] geometria molecular (Modelo de VSEPR)
 
 ## Estoquiometria

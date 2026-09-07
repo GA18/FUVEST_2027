@@ -48,7 +48,7 @@
 - [ ] efeito Joule
 
 ## Ondas e óptica
-- [ ]性质 de ondas (transversais e longitudinais)
+- [ ] Propriedades de ondas (transversais e longitudinais)
 - [ ] ondas sonoras (velocidade, frequência, comprimento de onda)
 - [ ] ondas eletromagnéticas
 - [ ] Óptica geométrica: reflexão, refração, lentes
