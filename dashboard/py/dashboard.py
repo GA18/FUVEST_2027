@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
-"""Gera o dashboard HTML a partir dos conteudo.md do repositório."""
+"""Gera o dashboard HTML a partir dos conteudo.md do repositório.
+
+Uso:
+    python3 dashboard/py/dashboard.py             # regenera dashboard/html/index.html
+    python3 dashboard/py/dashboard.py --serve     # servidor local com write-back (md = fonte única)
+"""
 
 import re
 import json
+import sys
+import threading
+import argparse
+import urllib.parse
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
@@ -62,6 +72,18 @@ def count_checkboxes(content):
     return done, total
 
 
+def done_indices(content):
+    """Índices (ordem das linhas de checkbox) já marcados como [x]."""
+    idxs = []
+    i = 0
+    for line in content.splitlines():
+        if re.match(r"^- \[[ x]\]", line):
+            if line.startswith("- [x]"):
+                idxs.append(i)
+            i += 1
+    return idxs
+
+
 def read_conteudo(area, disciplina):
     path = ROOT / area / disciplina / "conteudo.md"
     if path.exists():
@@ -81,6 +103,7 @@ def build_data():
                 "done": done,
                 "total": total,
                 "content": content,
+                "doneFlags": done_indices(content),
             }
         areas_data[area_id] = {
             "nome": area_info["nome"],
@@ -90,9 +113,147 @@ def build_data():
     return areas_data
 
 
+def disc_path(area_id, disc_id):
+    """Caminho do conteudo.md de uma disciplina."""
+    return ROOT / area_id / disc_id / "conteudo.md"
+
+
+def find_checkbox_lines(text):
+    """Índices (linha) das linhas de checkbox '- [...]' fora de code blocks."""
+    lines = text.splitlines()
+    idxs = []
+    in_code = False
+    for i, line in enumerate(lines):
+        if line.startswith("```"):
+            in_code = not in_code
+            continue
+        if in_code:
+            continue
+        if re.match(r"^- \[[ x]\]", line):
+            idxs.append(i)
+    return idxs
+
+
+def set_checkbox(area_id, disc_id, index, checked):
+    """Marca/desmarca o N-ésimo checkbox do conteudo.md e grava no disco.
+
+    Retorna (done, total) atualizados da disciplina, ou None se inválido.
+    """
+    path = disc_path(area_id, disc_id)
+    if not path.exists():
+        return None
+    text = path.read_text(encoding="utf-8")
+    idxs = find_checkbox_lines(text)
+    if index < 0 or index >= len(idxs):
+        return None
+    lines = text.splitlines()
+    line_idx = idxs[index]
+    marker = "- [x]" if checked else "- [ ]"
+    lines[line_idx] = re.sub(r"^- \[[ x]\]", marker, lines[line_idx])
+    path.write_text("\n".join(lines) + ("\n" if text.endswith("\n") else ""), encoding="utf-8")
+    done, total = count_checkboxes(path.read_text(encoding="utf-8"))
+    return done, total
+
+
+def reset_checkboxes(area_id=None):
+    """Desmarca todos os checkboxes. area_id=None → todas as áreas."""
+    reset_count = 0
+    for aid, area_info in AREAS.items():
+        if area_id and area_id != aid:
+            continue
+        for disc_id in area_info["disciplinas"]:
+            path = disc_path(aid, disc_id)
+            if not path.exists():
+                continue
+            text = path.read_text(encoding="utf-8")
+            new_text = re.sub(r"(?m)^- \[x\]", "- [ ]", text)
+            if new_text != text:
+                path.write_text(new_text, encoding="utf-8")
+                reset_count += 1
+    return reset_count
+
+
+class DashboardHandler(BaseHTTPRequestHandler):
+    # Lock global compartilhado para escrita concorrente nos arquivos
+    _write_lock = threading.Lock()
+
+    def log_message(self, fmt, *args):
+        sys.stderr.write("[dashboard] %s\n" % (fmt % args))
+
+    def _send(self, code, body, ctype="application/json"):
+        data = body.encode("utf-8") if isinstance(body, str) else body
+        self.send_response(code)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+    def do_GET(self):
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path == "/api/health":
+            self._send(200, json.dumps({"ok": True}))
+            return
+        # Servir arquivos de dashboard/html/
+        rel = urllib.parse.unquote(parsed.path.lstrip("/"))
+        html_dir = DASHBOARD_DIR / "html"
+        if rel in ("", "html"):
+            self.send_response(302)
+            self.send_header("Location", "/html/index.html")
+            self.end_headers()
+            return
+        if ".." in rel:
+            self._send(403, "forbidden", "text/plain")
+            return
+        f = html_dir / rel
+        if not f.is_file():
+            self._send(404, json.dumps({"error": "not found"}))
+            return
+        ctype = "text/html" if f.suffix == ".html" else (
+            "text/css" if f.suffix == ".css" else "application/octet-stream"
+        )
+        data = f.read_bytes()
+        self._send(200, data, ctype)
+
+    def do_POST(self):
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path not in ("/api/progress", "/api/reset"):
+            self._send(404, json.dumps({"error": "not found"}))
+            return
+        length = int(self.headers.get("Content-Length", 0) or 0)
+        raw = self.rfile.read(length) if length else b""
+        try:
+            payload = json.loads(raw.decode("utf-8")) if raw else {}
+        except json.JSONDecodeError:
+            self._send(400, json.dumps({"error": "invalid json"}))
+            return
+        with self._write_lock:
+            if parsed.path == "/api/reset":
+                n = reset_checkboxes(payload.get("area"))
+                self._send(200, json.dumps({"reset_files": n}))
+                return
+            area_id = payload.get("area")
+            disc_id = payload.get("disc")
+            index = payload.get("index")
+            checked = bool(payload.get("checked"))
+            if area_id not in AREAS or disc_id not in {
+                d for d, _ in AREAS[area_id]["disciplinas"]
+            }:
+                self._send(404, json.dumps({"error": "unknown disciplina"}))
+                return
+            result = set_checkbox(area_id, disc_id, index, checked)
+            if result is None:
+                self._send(400, json.dumps({"error": "index out of range"}))
+                return
+            done, total = result
+            self._send(200, json.dumps({"area": area_id, "disc": disc_id, "done": done, "total": total}))
+
+
 JS = """
 const AREAS_DATA = AREAS_PLACEHOLDER;
 const STORAGE_KEY = 'fuvest2027_progress';
+let SHOW_OFFLINE_WARNED = false;
+
+function isServed() { return window.location.protocol.indexOf('http') === 0; }
 
 function loadProgress() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
@@ -100,8 +261,33 @@ function loadProgress() {
 
 function saveProgress(p) { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }
 
+function showOfflineNote() {
+    if (SHOW_OFFLINE_WARNED) return;
+    SHOW_OFFLINE_WARNED = true;
+    const el = document.getElementById('offline-note');
+    if (el) el.style.display = 'block';
+}
+
+function buildInitialState() {
+    const state = {};
+    let itemIdx = 0;
+    for (const [areaId, area] of Object.entries(AREAS_DATA)) {
+        for (const [discId, disc] of Object.entries(area.disciplinas)) {
+            for (let i = 0; i < disc.total; i++) {
+                const key = discId + '_' + i;
+                const doneIdx = disc.doneFlags && disc.doneFlags.indexOf(i) >= 0;
+                state[key] = doneIdx;
+                itemIdx++;
+            }
+        }
+    }
+    return state;
+}
+
+const STATE = buildInitialState();
+let SERVER_OK = isServed();
+
 function updateStats() {
-    const p = loadProgress();
     let total = 0, done = 0;
     for (const [areaId, area] of Object.entries(AREAS_DATA)) {
         let areaTotal = 0, areaDone = 0;
@@ -110,8 +296,7 @@ function updateStats() {
             for (let i = 0; i < disc.total; i++) {
                 total++;
                 areaTotal++;
-                const key = discId + '_' + i;
-                if (p[key]) { done++; areaDone++; discDone++; }
+                if (STATE[discId + '_' + i]) { done++; areaDone++; discDone++; }
             }
             const uid = areaId + '-' + discId;
             const discPct = disc.total > 0 ? (discDone / disc.total * 100).toFixed(1) : '0.0';
@@ -155,6 +340,7 @@ function parseTopics(content) {
     const groups = [];
     let currentGroup = null;
     let inCodeBlock = false;
+    let itemIdx = 0;
     for (const line of lines) {
         if (line.startsWith('```')) { inCodeBlock = !inCodeBlock; continue; }
         if (inCodeBlock) continue;
@@ -164,7 +350,9 @@ function parseTopics(content) {
             groups.push(currentGroup);
         } else if (currentGroup && line.match(/^- \\[([ x])\\]/)) {
             const text = line.replace(/^- \\[[ x]\\]\\s*/, '');
-            currentGroup.items.push(text);
+            const checked = line.indexOf('- [x]') === 0;
+            currentGroup.items.push({ text: text, idx: itemIdx, checked: checked });
+            itemIdx++;
         }
     }
     return groups.filter(function(g) { return g.items.length > 0; });
@@ -173,7 +361,6 @@ function parseTopics(content) {
 function buildChecklist() {
     const tabsEl = document.getElementById('checklist-tabs');
     const contentsEl = document.getElementById('checklist-contents');
-    const progress = loadProgress();
     let firstTab = null;
     for (const [areaId, area] of Object.entries(AREAS_DATA)) {
         for (const [discId, disc] of Object.entries(area.disciplinas)) {
@@ -193,19 +380,17 @@ function buildChecklist() {
             div.id = tabId;
 
             let html = '';
-            let itemIdx = 0;
             for (const group of groups) {
                 html += '<div class="topic-group"><h3>' + group.name + '</h3>';
                 for (const item of group.items) {
-                    const key = discId + '_' + itemIdx;
-                    const isChecked = progress[key] || false;
+                    const key = discId + '_' + item.idx;
+                    const isChecked = STATE[key] || false;
                     const cls = isChecked ? ' done' : '';
                     const chk = isChecked ? ' checked' : '';
                     html += '<label class="topic-item' + cls + '">';
-                    html += '<input type="checkbox" data-key="' + key + '"' + chk + ' onchange="toggleTopic(this)">';
-                    html += '<span class="topic-text">' + item + '</span>';
+                    html += '<input type="checkbox" data-key="' + key + '" data-area="' + areaId + '" data-disc="' + discId + '" data-idx="' + item.idx + '"' + chk + ' onchange="toggleTopic(this)">';
+                    html += '<span class="topic-text">' + item.text + '</span>';
                     html += '</label>';
-                    itemIdx++;
                 }
                 html += '</div>';
             }
@@ -229,25 +414,51 @@ function switchTab(tabId) {
 
 function toggleTopic(el) {
     const key = el.dataset.key;
-    const progress = loadProgress();
-    if (el.checked) {
-        progress[key] = true;
-    } else {
-        delete progress[key];
-    }
-    saveProgress(progress);
+    const areaId = el.dataset.area;
+    const discId = el.dataset.disc;
+    const idx = parseInt(el.dataset.idx, 10);
     el.closest('.topic-item').classList.toggle('done', el.checked);
+
+    if (isServed()) {
+        fetch('/api/progress', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ area: areaId, disc: discId, index: idx, checked: el.checked })
+        }).then(function(r) { return r.json(); }).then(function(res) {
+            if (res && typeof res.done === 'number') {
+                STATE[key] = el.checked;
+                const disc = AREAS_DATA[res.area].disciplinas[res.disc];
+                disc.done = res.done;
+                disc.total = res.total;
+                updateStats();
+            }
+        }).catch(function() { offlineFallback(el, key); });
+    } else {
+        offlineFallback(el, key);
+    }
+}
+
+function offlineFallback(el, key) {
+    STATE[key] = el.checked;
+    const progress = loadProgress();
+    if (el.checked) progress[key] = true; else delete progress[key];
+    saveProgress(progress);
+    showOfflineNote();
     updateStats();
 }
 
 function resetChecklist() {
-    if (confirm('Tem certeza? Isso vai apagar todo o progresso salvo.')) {
-        localStorage.removeItem(STORAGE_KEY);
-        document.getElementById('checklist-tabs').innerHTML = '';
-        document.getElementById('checklist-contents').innerHTML = '';
-        buildChecklist();
-        updateStats();
+    if (!confirm('Tem certeza? Isso vai apagar todo o progresso salvo.')) return;
+    if (isServed()) {
+        fetch('/api/reset', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' })
+            .catch(function() {});
     }
+    localStorage.removeItem(STORAGE_KEY);
+    for (const k in STATE) STATE[k] = false;
+    document.getElementById('checklist-tabs').innerHTML = '';
+    document.getElementById('checklist-contents').innerHTML = '';
+    buildChecklist();
+    updateStats();
 }
 
 function initCountdown() {
@@ -255,7 +466,8 @@ function initCountdown() {
         { name: 'Inscrições', date: '2026-08-17' },
         { name: 'Inscrições (fim)', date: '2026-10-09' },
         { name: '1ª Fase', date: '2026-11-01' },
-        { name: '2ª Fase', date: '2026-12-06' },
+        { name: '2ª Fase (dia 1)', date: '2026-12-06' },
+        { name: '2ª Fase (dia 2)', date: '2026-12-07' },
     ];
     const container = document.getElementById('countdown');
     const today = new Date();
@@ -374,6 +586,7 @@ def generate_final_html():
                         "done": d["done"],
                         "total": d["total"],
                         "content": d["content"],
+                        "doneFlags": d["doneFlags"],
                     }
                     for did, d in a["disciplinas"].items()
                 },
@@ -430,6 +643,12 @@ def generate_final_html():
         # Checklist
         '<div class="checklist-section">',
         "<h2>Checklist Interativo</h2>",
+        '<div class="offline-note" id="offline-note">'
+        "Você está abrindo o dashboard direto do arquivo. As alterações serão salvas só "
+        "neste navegador. Para salvar nos <code>conteudo.md</code> do repositório, rode "
+        "<code>python3 dashboard/py/dashboard.py --serve</code> e abra "
+        "<code>http://localhost:8000/html/index.html</code>."
+        "</div>",
         '<div class="checklist-tabs" id="checklist-tabs"></div>',
         '<div id="checklist-contents"></div>',
         '<button class="reset-btn" onclick="resetChecklist()">Resetar progresso</button>',
@@ -448,6 +667,27 @@ def generate_final_html():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Dashboard FUVEST 2027")
+    parser.add_argument("--serve", action="store_true",
+                        help="inicia servidor local com write-back nos conteudo.md")
+    parser.add_argument("--port", type=int, default=8000, help="porta do servidor (padrão: 8000)")
+    args = parser.parse_args()
+
+    if args.serve:
+        server = ThreadingHTTPServer(("127.0.0.1", args.port), DashboardHandler)
+        html_abs = (DASHBOARD_DIR / "html" / "index.html").resolve()
+        print(f"Dashboard em http://localhost:{args.port}/html/index.html")
+        print("Progresso marca/desmarca os checkboxes nos conteudo.md (fonte única).")
+        if not html_abs.exists():
+            print("ATENÇÃO: index.html ainda não foi gerado. Rode o script sem --serve primeiro.")
+        try:
+            print("Pressione Ctrl+C para encerrar.")
+            server.serve_forever()
+        except KeyboardInterrupt:
+            print("\nServidor encerrado.")
+            server.server_close()
+        sys.exit(0)
+
     HTML_PATH.parent.mkdir(parents=True, exist_ok=True)
     html = generate_final_html()
     HTML_PATH.write_text(html, encoding="utf-8")
