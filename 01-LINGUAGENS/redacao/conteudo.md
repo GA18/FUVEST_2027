@@ -23,6 +23,12 @@
 - [ ] norma culta (gramática, ortografia, pontuação)
 - [ ] adequação da pessoa do discurso e do registro ao gênero solicitado
 
+## Recomendações internas do projeto
+
+- [ ] produzir uma redação por semana
+- [ ] planejar a resposta em 10 a 15 minutos
+- [ ] revisar a produção pelos critérios oficiais
+
 ## Erros comuns a evitar
 - [ ] cópia parcial ou integral da coletânea
 - [ ] fuga ao tema
@@ -32,7 +38,5 @@
 - [ ] repetição de ideias sem aprofundamento
 
 ## Prática
-- [ ] escrever 1 redação por semana
 - [ ] revisar com base nos critérios oficiais FUVEST
-- [ ] treinar leitura da proposta e planejamento (10-15 min)
 - [ ] praticar propostas de gêneros diferentes e revisar pelos critérios oficiais
