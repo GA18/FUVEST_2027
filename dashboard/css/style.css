@@ -184,6 +184,53 @@ body {
 .tab-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
 .tab-content { display: none; }
 .tab-content.active { display: block; }
+.discipline-tools {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+.view-btn {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.view-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+.summary-editor {
+    display: block;
+    width: 100%;
+    min-height: 280px;
+    resize: vertical;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    padding: 14px;
+    font: inherit;
+    line-height: 1.5;
+}
+.summary-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 12px;
+}
+.summary-status { color: var(--text-dim); font-size: 0.85rem; }
+.save-summary-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
 .topic-group { margin-bottom: 20px; }
 .topic-group h3 {
     font-size: 0.95rem;

@@ -103,6 +103,14 @@ def read_conteudo(area, disciplina):
     return ""
 
 
+def read_resumo(area, disciplina):
+    source_area, source_disc = CONTENT_PATHS.get((area, disciplina), (area, disciplina))
+    path = ROOT / source_area / source_disc / "resumo.txt"
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+    return ""
+
+
 def build_data():
     areas_data = {}
     for area_id, area_info in AREAS.items():
@@ -115,6 +123,7 @@ def build_data():
                 "done": done,
                 "total": total,
                 "content": content,
+                "resumo": read_resumo(area_id, disc_id),
                 "doneFlags": done_indices(content),
             }
         areas_data[area_id] = {
@@ -129,6 +138,17 @@ def disc_path(area_id, disc_id):
     """Caminho do conteudo.md de uma disciplina."""
     source_area, source_disc = CONTENT_PATHS.get((area_id, disc_id), (area_id, disc_id))
     return ROOT / source_area / source_disc / "conteudo.md"
+
+
+def resumo_path(area_id, disc_id):
+    source_area, source_disc = CONTENT_PATHS.get((area_id, disc_id), (area_id, disc_id))
+    return ROOT / source_area / source_disc / "resumo.txt"
+
+
+def save_resumo(area_id, disc_id, content):
+    path = resumo_path(area_id, disc_id)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
 
 
 def find_checkbox_lines(text):
@@ -235,7 +255,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urllib.parse.urlparse(self.path)
-        if parsed.path not in ("/api/progress", "/api/reset"):
+        if parsed.path not in ("/api/progress", "/api/reset", "/api/resumo"):
             self._send(404, json.dumps({"error": "not found"}))
             return
         length = int(self.headers.get("Content-Length", 0) or 0)
@@ -256,6 +276,16 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 return
             area_id = payload.get("area")
             disc_id = payload.get("disc")
+            if parsed.path == "/api/resumo":
+                content = payload.get("content")
+                if area_id not in AREAS or disc_id not in {
+                    d for d, _ in AREAS[area_id]["disciplinas"]
+                } or not isinstance(content, str):
+                    self._send(400, json.dumps({"error": "invalid resumo payload"}))
+                    return
+                save_resumo(area_id, disc_id, content)
+                self._send(200, json.dumps({"area": area_id, "disc": disc_id, "saved": True}))
+                return
             index = payload.get("index")
             checked = payload.get("checked")
             if area_id not in AREAS or disc_id not in {
@@ -411,6 +441,11 @@ function buildChecklist() {
             div.id = tabId;
 
             let html = '';
+            html += '<div class="discipline-tools">';
+            html += '<button class="view-btn active" type="button" onclick="showChecklist(&quot;' + tabId + '&quot;)">Checklist</button>';
+            html += '<button class="view-btn" type="button" onclick="showSummary(&quot;' + tabId + '&quot;)">Resumo</button>';
+            html += '</div>';
+            html += '<div class="checklist-view" id="checklist-view-' + tabId + '">';
             for (const group of groups) {
                 html += '<div class="topic-group"><h3>' + group.name + '</h3>';
                 for (const item of group.items) {
@@ -425,13 +460,61 @@ function buildChecklist() {
                 }
                 html += '</div>';
             }
+            html += '</div>';
+            html += '<div class="summary-view" id="summary-view-' + tabId + '" hidden>';
+            html += '<textarea class="summary-editor" id="summary-editor-' + tabId + '" spellcheck="true"></textarea>';
+            html += '<div class="summary-actions"><span class="summary-status" id="summary-status-' + tabId + '"></span><button class="save-summary-btn" type="button" onclick="saveSummary(&quot;' + areaId + '&quot;,&quot;' + discId + '&quot;,&quot;' + tabId + '&quot;)">Salvar resumo</button></div>';
+            html += '</div>';
             div.innerHTML = html;
+            const editor = div.querySelector('.summary-editor');
+            const savedSummaries = JSON.parse(localStorage.getItem('fuvest2027_summaries') || '{}');
+            editor.value = savedSummaries[areaId + '_' + discId] || disc.resumo || '';
             contentsEl.appendChild(div);
 
             if (!firstTab) firstTab = tabId;
         }
     }
     if (firstTab) switchTab(firstTab);
+}
+
+function showChecklist(tabId) {
+    const tab = document.getElementById(tabId);
+    tab.querySelector('.checklist-view').hidden = false;
+    tab.querySelector('.summary-view').hidden = true;
+    tab.querySelectorAll('.view-btn').forEach(function(btn, index) { btn.classList.toggle('active', index === 0); });
+}
+
+function showSummary(tabId) {
+    const tab = document.getElementById(tabId);
+    tab.querySelector('.checklist-view').hidden = true;
+    tab.querySelector('.summary-view').hidden = false;
+    tab.querySelectorAll('.view-btn').forEach(function(btn, index) { btn.classList.toggle('active', index === 1); });
+}
+
+function saveSummary(areaId, discId, tabId) {
+    const editor = document.getElementById('summary-editor-' + tabId);
+    const status = document.getElementById('summary-status-' + tabId);
+    const content = editor.value;
+    const key = areaId + '_' + discId;
+    if (!isServed()) {
+        const summaries = JSON.parse(localStorage.getItem('fuvest2027_summaries') || '{}');
+        summaries[key] = content;
+        localStorage.setItem('fuvest2027_summaries', JSON.stringify(summaries));
+        status.textContent = 'Salvo neste navegador.';
+        return;
+    }
+    fetch('/api/resumo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ area: areaId, disc: discId, content: content })
+    }).then(function(response) {
+        if (!response.ok) throw new Error('summary save failed');
+        return response.json();
+    }).then(function() {
+        status.textContent = 'Resumo salvo em resumo.txt.';
+    }).catch(function() {
+        status.textContent = 'Não foi possível salvar no arquivo.';
+    });
 }
 
 function switchTab(tabId) {
@@ -624,6 +707,7 @@ def generate_final_html():
                         "done": d["done"],
                         "total": d["total"],
                         "content": d["content"],
+                        "resumo": d["resumo"],
                         "doneFlags": d["doneFlags"],
                     }
                     for did, d in a["disciplinas"].items()
