@@ -71,7 +71,7 @@
 - [ ] Tecnologia aplicada à educação física
 - [ ] Treinamento esportivo com tecnologia
 - [ ] Redes sociais e prática esportiva
-- [ ] Tecnologia e preprocessos de lesões
+- [ ] Tecnologia e prevenção de lesões
 - [ ] Virtualização de práticas corporais
 
 ## Referências de Estudo

@@ -22,7 +22,7 @@ Link: https://www.youtube.com/user/jubilut
 - Conteúdo: canal completo com playlists sobre biologia celular, genética, ecologia, fisiologia humana, biomas do Brasil, PqC Brasil (Política, Química e Ciência) e muito mais
 - Nível: Ensino Médio / vestibular
 - Gratuito: sim
-- Avaliação: maior canal de biologia do Brasil; professor Paulo Jubilut é biologist, educador e fundador do Aprova Total
+- Avaliação: canal de biologia voltado ao ensino e à preparação para vestibulares; conferir o conteúdo diretamente antes de usar como fonte principal.
 
 ## Livro
 

@@ -28,7 +28,7 @@ Link: https://www.youtube.com/c/TodaMat%C3%A9riaBrasil
 
 ### Química
 Autor: Pierre Arlindo Gomes, Ione Rodrigues dos Santos, Marisa de Azevedo Moura
-- Capítulos: todos os capítulos do Ensino Médio — Estrutura Atômica, Tabela Periódica, Ligações Químicas, Estoquiometria, Soluções, Equilíbrio Químico, Cinética, Química Orgânica
+- Capítulos: todos os capítulos do Ensino Médio — Estrutura Atômica, Tabela Periódica, Ligações Químicas, Estequiometria, Soluções, Equilíbrio Químico, Cinética, Química Orgânica
 - Conteúdos: conteúdo programático completo para vestibulares, com exercícios e questões ao final de cada capítulo
 - Adequação: livro didático amplamente utilizado em escolas brasileiras; alinhado com o edital da FUVEST e com linguagem acessível
 

@@ -24,7 +24,7 @@
 - [ ] Crase
 - [ ] Pontuação (vírgula, ponto e vírgula, dois-pontos, ponto final)
 - [ ] Sintaxe: período composto por subordinação, coordenação, justaposição
-- [ ] Oração subordinada substantiva, adverbial, adjectiva (relativa)
+- [ ] Oração subordinada substantiva, adverbial, adjetiva (relativa)
 - [ ] Oração subordinada reduzida (particípio, gerúndio, infinitivo)
 - [ ] Locuções verbais e prepositivas
 

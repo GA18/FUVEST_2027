@@ -1,64 +1,44 @@
-# Física
+# Física — objetos do Programa 2027
 
-## Grandezas e medidas
+## Mecânica
 - [ ] grandezas escalares e vetoriais
-- [ ] sistemas de unidades (SI) e conversões
-- [ ] algarismos significativos e ordem de grandeza
-- [ ] erro absoluto, relativo e proporcional
+- [ ] cinemática: espaço, tempo, velocidade e aceleração
+- [ ] leis de Newton e força
+- [ ] trabalho e conservação da energia
+- [ ] impulso, momento linear e colisões
+- [ ] gravitação, leis de Newton e leis de Kepler
 
-## Cinemática
-- [ ] MRU (movimento retilíneo uniforme)
-- [ ] MRUV (movimento retilíneo uniformemente variado)
-- [ ] lançamento horizontal e oblíquo
-- [ ] gráficos de posição, velocidade e aceleração
+## Termologia e fluidos
+- [ ] termometria, calorimetria e dilatação térmica
+- [ ] processos de transmissão de energia
+- [ ] leis da termodinâmica e ciclos termodinâmicos
+- [ ] processos termodinâmicos em motores a combustão
+- [ ] hidrostática: pressão e empuxo
+- [ ] hidrodinâmica: vazão e continuidade de massa
+- [ ] aquecimento global e efeito estufa
 
-## Dinâmica
-- [ ] leis de Newton (1ª, 2ª e 3ª leis)
-- [ ] força peso, força normal, atrito (estático e dinâmico)
-- [ ] força elástica (Lei de Hooke)
-- [ ] plano inclinado
-- [ ] sistemas de blocos
+## Eletricidade, magnetismo e energia
+- [ ] eletrostática: Lei de Coulomb e campo elétrico
+- [ ] eletrodinâmica e elementos de circuitos elétricos
+- [ ] magnetismo e campo magnético
+- [ ] geração de energia elétrica
+- [ ] propriedade elétrica dos materiais: condutores, semicondutores e isolantes
+- [ ] transistores e circuitos integrados
+- [ ] energia solar e matriz energética
 
-## Trabalho e energia
-- [ ] trabalho de uma força
-- [ ] energia cinética e potencial
-- [ ] Teorema da Energia Cinética
-- [ ] conservação da energia mecânica
-- [ ] potência
+## Ondas, óptica e Física Moderna
+- [ ] ondas eletromagnéticas e faixa de frequências
+- [ ] ondas harmônicas: velocidade, frequência e comprimento de onda
+- [ ] ondas sonoras: timbre, altura, frequência, notas musicais e decibéis
+- [ ] movimento harmônico
+- [ ] óptica: propagação, reflexão, refração e absorção da luz
+- [ ] espectroscopia
+- [ ] quantização de energia e natureza ondulatória da matéria
+- [ ] efeito fotoelétrico
+- [ ] radioatividade e radiações ionizantes
+- [ ] modelos cosmológicos, Big Bang e Relatividade Geral
+- [ ] evolução estelar e modelo padrão de partículas
 
-## Impulso e quantidade de movimento
-- [ ] quantidade de movimento (momento linear)
-- [ ] impulso e Teorema do Impulso
-- [ ] conservação da quantidade de movimento
-- [ ] colisões (elásticas, inelásticas, perfeitamente inelásticas)
-
-## Gravitação
-- [ ] Lei da Gravitação Universal
-- [ ] campo gravitacional
-- [ ] queda livre
-- [ ] órbitas e satélites artificiais
-
-## Eletricidade e magnetismo
-- [ ] carga elétrica, campo elétrico e potencial elétrico
-- [ ] capacitância e capacitores
-- [ ] corrente elétrica, resistência e Lei de Ohm
-- [ ] circuitos série e paralelo
-- [ ] resistores mistos
-- [ ] potência elétrica
-- [ ] efeito Joule
-
-## Ondas e óptica
-- [ ] Propriedades de ondas (transversais e longitudinais)
-- [ ] ondas sonoras (velocidade, frequência, comprimento de onda)
-- [ ] ondas eletromagnéticas
-- [ ] Óptica geométrica: reflexão, refração, lentes
-- [ ] espelhos (planos, esféricos)
-- [ ] dispersão da luz e espectro
-
-## Termodinâmica
-- [ ] temperatura e escalas termométricas
-- [ ] calor e calor específico
-- [ ] dilatação térmica
-- [ ] leis da termodinâmica (0ª, 1ª, 2ª leis)
-- [ ] processos termodinâmicos (isotérmico, isobárico, isocórico, adiabático)
-- [ ] máquinas térmicas e rendimento
+## Investigação científica
+- [ ] processos e práticas da investigação científica
+- [ ] linguagem científica, ciência, ética e fake news

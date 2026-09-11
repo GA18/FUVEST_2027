@@ -1,4 +1,4 @@
-# 02 — MATEMÁTICA E CÓDIGOS
+# 02 — MATEMÁTICA E SUAS TECNOLOGIAS
 
 Área composta por 4 grandes blocos temáticos. Na 1ª fase, questões de múltipla escolha focadas em aplicação e resolução de problemas.
 
@@ -35,7 +35,7 @@
 ---
 
 ## Dicas de prova (1ª fase)
-- 80 questões de múltipla escolha, tempo de 4 horas.
+- 80 questões de múltipla escolha, duração de até 5 horas.
 - Questões de raciocínio lógico, não apenas decoreba.
 - Resolver provas anteriores é o melhor preparo.
 - Calcular tempo médio por questão (~3 minutos).

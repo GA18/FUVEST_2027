@@ -1,4 +1,4 @@
-# 04 — CIÊNCIAS HUMANAS E SOCIAIS
+# 04 — CIÊNCIAS HUMANAS E SOCIAIS APLICADAS
 
 Área composta por 4 disciplinas: História, Geografia, Filosofia e Sociologia. Na 1ª fase, questões de múltipla escolha sobre temas contemporâneos e processos históricos.
 

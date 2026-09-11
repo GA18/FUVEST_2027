@@ -1,45 +1,34 @@
-# Geografia
+# Geografia — objetos do Programa 2027
 
-## Espaço e território
-- [ ] conceitos: espaço, lugar, região, território
-- [ ] organização do espaço brasileiro (regionais, estaduais, municipais)
-- [ ] geopolítica e fronteiras
-- [ ] escalas de análise (local, regional, global)
+## Espaço, território e cartografia
+- [ ] relações entre espaço, sociedade, natureza, trabalho e tempo
+- [ ] paisagem, território, territorialidade e fronteiras
+- [ ] escalas local, regional e global
+- [ ] cartografia, mapas temáticos e raciocínio geográfico
+- [ ] geotecnologias e tecnologias digitais
+- [ ] geopolítica, potências e organismos internacionais
 
-## Cartografia e geotecnologias
-- [ ] leitura de mapas e plantas
-- [ ] sistema de coordenadas geográficas e UTM
-- [ ] imageamento de satélite e SIG (mencionar conceitos)
+## População, sociedade e trabalho
+- [ ] transição demográfica, população economicamente ativa e urbanização
+- [ ] migrações, refugiados e mobilidade espacial
+- [ ] desigualdades territoriais e socioespaciais
+- [ ] segregação espacial e cultural
+- [ ] fluxos de informação, mercadorias e capital
+- [ ] trabalho urbano e rural, trabalho análogo à escravidão e transformações tecnológicas
+- [ ] indicadores de emprego, trabalho e renda
 
-## Meio ambiente e natureza
-- [ ] atmosfera (composição, camadas, clima)
-- [ ] clima e vegetação do Brasil e do mundo
-- [ ] ciclo da água e da matéria
-- [ ] riscos naturais (terremotos, enchentes, deslizamentos)
-- [ ] biomas brasileiros (Amazônia, Mata Atlântica, Cerrado, Caatinga, Pampa, Pantanal)
+## Natureza e questão socioambiental
+- [ ] dinâmica da natureza e impactos da ação antrópica
+- [ ] riscos, desastres e vulnerabilidade ambiental
+- [ ] mudanças climáticas e políticas ambientais internacionais
+- [ ] exploração de recursos, agropecuária, mineração, petróleo e desmatamento
+- [ ] erosão, queimadas, poluição e assoreamento
+- [ ] gestão de resíduos e sustentabilidade
+- [ ] legislação ambiental, acordos internacionais e governança
 
-## Sociedade e cultura
-- [ ] população e demografia (crescimento, transição demográfica)
-- [ ] urbanização no Brasil e no mundo
-- [ ] mobilidade espacial (migração, deslocamentos pendulares)
-- [ ] diversidade cultural (etnias, línguas, religiões)
-
-## Economia e desenvolvimento
-- [ ] setores econômicos (primário, secundário, terciário)
-- [ ] globalização e divisão internacional do trabalho
-- [ ] comércio exterior e blocos econômicos
-- [ ] atividades econômicas no Brasil (agropecuária, indústria, serviços)
-- [ ] infraestrutura e transportes
-
-## Questões sociais e territoriais
-- [ ] desigualdades socioespaciais
-- [ ] conflitos territoriais (rurais e urbanos)
-- [ ] reforma agrária e movimentos sociais
-- [ ] política e território
-- [ ] segurança pública e violência
-
-## Brasil e o mundo
-- [ ] relações internacionais do Brasil
-- [ ] BRICS e protagonismo sul-sul
-- [ ] Amazônia e questão ambiental internacional
-- [ ] fronteiras e integração regional
+## Brasil e mundo contemporâneo
+- [ ] povos indígenas, quilombolas e comunidades tradicionais
+- [ ] fronteiras culturais, integração e exclusão
+- [ ] políticas públicas e infraestrutura como promoção de direitos
+- [ ] organismos internacionais e economia globalizada
+- [ ] padrões de consumo, indústria cultural e sustentabilidade

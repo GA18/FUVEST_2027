@@ -1,17 +1,18 @@
 # Redação
 
 ## Estrutura da prova (2ª fase)
-- [ ] redação discursiva (tema geral + proposta específica)
-- [ ] proposta pode exigir mais de um gênero textual
-- [ ] escolha da proposta (3 opções) e atendimento à modalidade
-- [ ] uso de coletânea — não pode copiar trechos diretamente
-- [ ] pontuação: conteúdo, norms da língua, aspectos da proposta
+- [ ] redação na prova discursiva do primeiro dia da 2ª fase
+- [ ] proposta pode solicitar mais de um gênero textual
+- [ ] escolha de uma proposta e atendimento ao tipo e gênero solicitados
+- [ ] uso adequado da coletânea, sem cópia integral ou parcial
+- [ ] critérios: tema, autoria, modalidade textual, coesão, coerência e correção gramatical
 
-## Estrutura dissertativa-argumentativa
-- [ ] introdução: apresentação do tema + tese
-- [ ] desenvolvimento: 2-3 parágrafos com argumentos
-- [ ] contra-argumento (parágrafo de refutação)
-- [ ] conclusão: retomada da tese + proposta de intervenção (se exigido)
+## Construção textual
+- [ ] identificar o tipo e o gênero solicitado antes de escrever
+- [ ] planejar tema, finalidade, interlocutor e estrutura composicional
+- [ ] organizar ideias, argumentos e informações com progressão textual
+- [ ] usar recursos de coesão e manter coerência
+- [ ] concluir de acordo com o gênero solicitado, sem aplicar um modelo obrigatório
 
 ## Checklist de redação
 - [ ] tese clara e defendida ao longo do texto
@@ -20,12 +21,12 @@
 - [ ] coerência (lógica entre ideias)
 - [ ] adequação ao gênero e à proposta
 - [ ] norma culta (gramática, ortografia, pontuação)
-- [ ] terceira pessoa do singular / impessoalidade
+- [ ] adequação da pessoa do discurso e do registro ao gênero solicitado
 
 ## Erros comuns a evitar
 - [ ] cópia parcial ou integral da coletânea
 - [ ] fuga ao tema
-- [ ] texto narrativo quando se pede dissertativo
+- [ ] uso de gênero ou tipo textual diferente do solicitado
 - [ ] falta de argumentação (apenas opiniões)
 - [ ] parágrafos muito curtos ou sem desenvolvimento
 - [ ] repetição de ideias sem aprofundamento
@@ -34,4 +35,4 @@
 - [ ] escrever 1 redação por semana
 - [ ] revisar com base nos critérios oficiais FUVEST
 - [ ] treinar leitura da proposta e planejamento (10-15 min)
-- [ ] estudar modelos de redações nota 10
+- [ ] praticar propostas de gêneros diferentes e revisar pelos critérios oficiais

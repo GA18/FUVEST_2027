@@ -23,7 +23,7 @@ Autor: Raymond Murphy
 ### Racha Cuca - Inglês
 Link: https://www.rachacuca.com.br
 - Tipo: site de jogos educativos
-- Conteúdo: Questões de inglês no estilo vestibular, interpretção de textos em inglês
+- Conteúdo: Questões de inglês no estilo vestibular, interpretação de textos em inglês
 - Nível: Ensino Médio / vestibular
 - Gratuito: sim
 - Avaliação: Jogos interativos que simulam questões de vestibulares; útil para praticar interpretação

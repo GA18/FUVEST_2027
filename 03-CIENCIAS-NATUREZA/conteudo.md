@@ -22,7 +22,7 @@
 ### Química
 → ver `quimica/conteudo.md`
 - Estrutura atômica e ligações
-- Estoquiometria e soluções
+- Estequiometria e soluções
 - Reações e equilíbrio
 - Química orgânica
 - Química e sociedade
@@ -33,4 +33,4 @@
 - Questões mistas (Biologia + Física + Química) não são separadas.
 - Foco em conceitos fundamentais e interpretação de dados.
 - Saber ler gráficos e tabelas é essencial.
-- Física tem peso alto — priorizar mecânica e eletricidade.
+- A prioridade da segunda fase depende da carreira escolhida; consulte o Guia de Provas e o Guia de Carreiras.

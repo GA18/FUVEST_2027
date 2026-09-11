@@ -18,7 +18,7 @@
 
 ```
 FUVEST_2027/
-├── 01-LINGUAGENS/          → português, literatura, inglês, redação, arte, educação física
+├── 01-LINGUAGENS/          → Português, Inglês, Arte e Educação Física; literatura e redação são apoio da 2ª fase
 │   ├── portugues/
 │   ├── literatura/
 │   ├── ingles/
@@ -28,7 +28,7 @@ FUVEST_2027/
 ├── 02-MATEMATICA/           → álgebra, funções, geometria, estatística
 │   ├── algebra/
 │   ├── funcoes/
-│   ├── geometria/
+│   ├── geometria/            → checklist principal de Geometria
 │   │   ├── geometria-analitica/
 │   │   ├── geometria-plana/
 │   │   └── geometria-espacial/
@@ -56,20 +56,22 @@ FUVEST_2027/
 
 - `conteudo.md` — checklist detalhado de tópicos (marque com [x] ao concluir)
 - `materials.md` — recursos reais verificados (YouTube, livros, sites)
-- `resumo.txt` — suas anotações (vazio para você preencher)
+- `resumo.txt` — suas anotações, fichamentos e revisão rápida
+
+As subpastas `geometria/geometria-analitica/`, `geometria/geometria-plana/` e
+`geometria/geometria-espacial/` são temas de apoio. O checklist interativo usa
+`geometria/conteudo.md` como fonte única para evitar a duplicação dos itens.
 
 ## Referências oficiais
 
 | Documento | Descrição |
 |-----------|-----------|
 | [fuvest2027_programa.txt](fuvest2027_programa.txt) | Programa oficial da FUVEST 2027 |
-| [guia_provas_2027.txt](guia_provas_2027.txt) | Guia de provas (2022) |
-| `01.pdf` | Edital da FUVEST 2027 |
-| `02.pdf` | Guia de provas 2027 (PDF) |
-| `dicas-do-candidato-fuvest2025.pdf` | Dicas do candidato |
-| `redacao.pdf` | Guia de redação |
+| [guia_provas_2027.txt](guia_provas_2027.txt) | Guia de Provas da FUVEST 2027 |
+| [fuvest2027-programa-vestibular.pdf](fuvest2027-programa-vestibular.pdf) | Programa oficial em PDF |
+| [guia_provas_2027.pdf](guia_provas_2027.pdf) | Guia de Provas em PDF |
 
-## Obras obrigatórias (9 obras — todas por autoras)
+## Obras obrigatórias (9 obras)
 
 1. **Opúsculo Humanitário** — Nísia Floresta
 2. **Nebulosas** — Narcisa Amália
@@ -84,5 +86,12 @@ FUVEST_2027/
 ## Datas importantes
 
 - **Inscrições:** 17/08/2026 a 09/10/2026
-- **1ª fase:** 01/11/2026 (80 questões múltipla escolha, 4 horas)
+- **1ª fase:** 01/11/2026 (80 questões de múltipla escolha, até 5 horas)
 - **2ª fase:** 06 e 07/12/2026 (provas discursivas + redação)
+
+## Escopo do checklist
+
+Os checklists das disciplinas são uma decomposição prática dos objetos de conhecimento
+do Programa do Vestibular 2027. O percentual do dashboard mede apenas os itens do
+checklist interno; não é uma nota oficial nem garante, sozinho, o domínio integral do programa.
+Literatura obrigatória e redação são mantidas no projeto como apoio específico da 2ª fase.

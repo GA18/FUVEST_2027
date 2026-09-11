@@ -1,26 +1,25 @@
-# 01 — LINGUAGENS E CÓDIGOS
+# 01 — LINGUAGENS E SUAS TECNOLOGIAS
 
-Área composta por 5 disciplinas (núcleo comum + redação). Na 1ª fase, questões de múltipla escolha sobre todas as disciplinas.
+Área composta pelos quatro componentes do Programa 2027: Português, Inglês, Arte e Educação Física. Literatura obrigatória e redação permanecem em pastas próprias como apoio específico da 2ª fase; não são componentes adicionais da 1ª fase.
 
 ## Disciplinas
 
 ### Português (interpretação de textos, gramática, coesão)
 → ver `portugues/conteudo.md`
 
-### Literatura (9 obras obrigatórias — todas por autoras)
-→ ver `literatura/conteudo.md`
-
 ### Inglês (leitura e interpretação)
 → ver `ingles/conteudo.md`
-
-### Redação (discursiva — 2ª fase)
-→ ver `redacao/conteudo.md`
 
 ### Arte (práticas culturais, linguagens visuais, música, dança, teatro)
 → ver `arte/conteudo.md`
 
 ### Educação Física (práticas corporais, cultura corporal)
 → ver `educacao-fisica/conteudo.md`
+
+## Apoio da 2ª fase
+
+- Literatura: ver `literatura/conteudo.md`
+- Redação: ver `redacao/conteudo.md`
 
 ---
 

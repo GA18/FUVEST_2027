@@ -1,48 +1,36 @@
-# História
+# História — objetos do Programa 2027
 
-## Brasil Colônia (1500-1822)
-- [ ] colonização portuguesa (exploração, administração, escravidão)
-- [ ] sistema colonial e capitanias hereditárias
-- [ ] economia açucareira, mineradora e pecuária
-- [ ] resistências indígenas e africanas
-- [ ] conspiração e Inconfidência Mineira
+## Povos, culturas e formação histórica
+- [ ] produção do conhecimento histórico e narrativas sobre Oriente Médio, Ásia, Europa, América e África
+- [ ] memória, cultura, identidade e diversidade
+- [ ] Antiguidade: cidadania, democracia e formas de representação
+- [ ] Medievo: poder, representação e organização social
+- [ ] formação dos Estados nacionais e diversidade étnico-cultural
+- [ ] dominação e resistência de populações indígenas e afrodescendentes
+- [ ] diáspora africana e formação das sociedades latino-americanas
 
-## Brasil Imperial (1822-1889)
-- [ ] independência e constituições
-- [ ] economia cafeeira e imigração
-- [ ] escravidão e abolicionismo (Lei Áurea)
-- [ ] Segundo Reinado (centralização, Modernização)
-- [ ] Guerra do Paraguai
+## Modernidade e capitalismo
+- [ ] Iluminismo, discurso civilizatório e pensamento liberal
+- [ ] Revolução Industrial e mudanças do capitalismo
+- [ ] imperialismo e neocolonialismo
+- [ ] escravidão, trabalho servil e trabalho assalariado
+- [ ] patriarcalismo, concentração de riqueza e formação de desigualdades
 
-## Brasil República (1889-presente)
-- [ ] Proclamação da República e Primeira República (República Velha)
-- [ ] Era Vargas (Estado Novo, trabalhismo)
-- [ ] redemocratização e governo JK
-- [ ] ditadura militar (1964-1985)
-- [ ] movimentos de resistência (AI-5, anistia, transição democrática)
-- [ ] República Nova (1946-1964)
-- [ ] constituição de 1988 e cidadania
+## Revoluções, guerras e cidadania
+- [ ] revoluções Mexicana e Russa
+- [ ] Primeira e Segunda Guerras Mundiais
+- [ ] lutas democráticas nas Américas
+- [ ] regimes ditatoriais, totalitários, golpes de Estado e terrorismo
+- [ ] Apartheid e segregação étnico-racial
+- [ ] Declaração Universal dos Direitos Humanos
 
-## História contemporânea do Brasil
-- [ ] Collor, FHC, Lula, Dilma, Temer, Bolsonaro, Lula
-- [ ] processos sociais e mobilizações recentes
-- [ ] direitos civis e movimentos sociais (Mulheres, LGBTQIA+, movimento negro)
+## Brasil e América Latina
+- [ ] colonização, resistências indígenas e afrodescendentes
+- [ ] Independência, Império, escravidão e abolicionismo
+- [ ] República, coronelismo, clientelismo e populismo
+- [ ] Era Vargas, ditadura militar, redemocratização e Constituição de 1988
+- [ ] direitos trabalhistas e transformações sociais no Brasil
 
-## História Geral — Idade Moderna
-- [ ] renascimento e reforma protestante
-- [ ] absolutismo e mercantilismo
-- [ ] revoluções burguesas (Inglaterra, EUA, França)
-- [ ] Iluminismo
-
-## História Geral — Idade Contemporânea
-- [ ] Revolução Industrial
-- [ ] imperialismo e colonialismo
-- [ ] primeira e segunda guerras mundiais
-- [ ] guerra fria (capitalismo vs. socialismo)
-- [ ] descolonização da Ásia e África
-- [ ] globalização
-
-## Fontes históricas
-- [ ] análise de documentos e imagens
-- [ ] interpretação de mapas históricos
-- [ ] comparação entre fontes primárias e secundárias
+## Leitura histórica
+- [ ] análise de documentos, imagens, mapas, gráficos e tabelas
+- [ ] comparação de fontes e narrativas históricas

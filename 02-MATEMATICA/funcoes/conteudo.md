@@ -1,51 +1,31 @@
-# Funções
+# Matemática — funções
 
-## Conceitos fundamentais
-- [ ] definição de função (domínio, contradomínio, imagem)
-- [ ] determinação do domínio (restrições: divisão por zero, raiz de negativo, logaritmo)
-- [ ] representação algébrica, gráfica e tabular
-- [ ] interseção com eixos (zeros da função)
+## Conceitos e representações
+- [ ] conceito de função e variação entre grandezas
+- [ ] proporcionalidade direta e inversa
+- [ ] domínio, imagem, zeros e intervalos de crescimento e decrescimento
+- [ ] representações algébrica, gráfica e tabular
+- [ ] composição e função inversa
 
-## Função afim (1º grau)
-- [ ] equação y = ax + b
-- [ ] gráfico (reta) e inclinação
-- [ ] crescente, decrescente, constante
-- [ ] interseção com eixos
+## Funções algébricas
+- [ ] função polinomial do primeiro grau
+- [ ] função polinomial do segundo grau: raízes, concavidade, máximo e mínimo
+- [ ] funções definidas por uma ou mais sentenças
+- [ ] funções racionais simples
+- [ ] funções modulares
 
-## Função quadrática (2º grau)
-- [ ] equação y = ax² + bx + c
-- [ ] raízes (fórmula de Bhaskara, discriminante Δ)
-- [ ] vértice e eixo de simetria
-- [ ] concavidade e máximo/mínimo
-- [ ] relate com equações do 2º grau
+## Exponenciais, logaritmos e trigonometria
+- [ ] potenciação e radiciação aplicadas a funções
+- [ ] logaritmos e função logarítmica
+- [ ] funções exponenciais e variação exponencial e logarítmica
+- [ ] medidas de ângulos em graus e radianos
+- [ ] operações e identidades trigonométricas
+- [ ] ciclo trigonométrico
+- [ ] funções seno, cosseno e tangente
+- [ ] modelagem de fenômenos periódicos
 
-## Função exponencial e logarítmica
-- [ ] propriedades da exponenciação
-- [ ] gráfico da função exponencial
-- [ ] propriedades do logaritmo
-- [ ] logaritmo decimal e natural
-- [ ] equações exponenciais e logarítmicas
-
-## Função trigonométrica
-- [ ] seno, cosseno e tangente
-- [ ] ciclo trigonométrico e períodos
-- [ ] gráficos das funções trigonométricas
-- [ ] equações trigonométricas básicas
-
-## Função modular
-- [ ] definição e gráfico
-- [ ] equações com módulo
-
-## Função racional simples
-- [ ] domínio (pontos de descontinuidade)
-- [ ] assíntotas verticais e horizontais
-
-## Transformações de funções
-- [ ] translação vertical e horizontal
-- [ ] reflexão
-- [ ] dilatação e compressão
-
-## Aplicações
-- [ ] modelagem com funções
-- [ ] composição de funções
-- [ ] função inversa
+## Equações, inequações e gráficos
+- [ ] equações e inequações polinomiais
+- [ ] equações e inequações exponenciais e logarítmicas
+- [ ] equações e inequações modulares e trigonométricas
+- [ ] interpretação de gráficos em contextos econômicos, sociais e naturais

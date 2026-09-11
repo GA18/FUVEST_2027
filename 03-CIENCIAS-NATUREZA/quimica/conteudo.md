@@ -1,59 +1,42 @@
-# Química
+# Química — objetos do Programa 2027
 
-## Estrutura atômica
-- [ ] modelo atômico (Thomson, Rutherford, Bohr, orbitais)
-- [ ] número atômico, massa atômica, número de massa
-- [ ] configuração eletrônica
-- [ ] tabela periórica (tendências: raio atômico, energia de ionização, eletronegatividade)
-- [ ] isótopos e íons
+## Matéria e transformações
+- [ ] estados físicos, modelo de partículas e propriedades físicas
+- [ ] separação de misturas
+- [ ] modelos atômicos e evolução histórica
+- [ ] tabela periódica e propriedades periódicas
+- [ ] estruturas moleculares, polaridade e forças intra e intermoleculares
+- [ ] ligações iônicas, covalentes e metálicas
 
-## Ligações químicas
-- [ ] ligação iônica
-- [ ] ligação covalente (polar e apolar)
-- [ ] ligação metálica
-- [ ] forças de van der Waals e pontes de hidrogênio
-- [ ] geometria molecular (Modelo de VSEPR)
+## Reações, energia e eletroquímica
+- [ ] conservação da matéria e leis ponderais
+- [ ] massa molar e constante de Avogadro
+- [ ] reações químicas e energia
+- [ ] entalpia, energia de ligação e processos endo e exotérmicos
+- [ ] cinética química
+- [ ] equilíbrio químico
+- [ ] oxirredução e eletroquímica
 
-## Estoquiometria
-- [ ] massa molar e número de Avogadro
-- [ ] cálculo estequiométrico (massa, volume, mols)
-- [ ] reagente limitante
-- [ ] rendimento de reação
+## Gases e soluções
+- [ ] leis dos gases
+- [ ] soluções e relações entre medidas de concentração
+- [ ] coloides e soluções coloidais
+- [ ] propriedades coligativas e pressão osmótica da água
+- [ ] ácidos, bases e sais
+- [ ] pH e neutralização
 
-## Soluções
-- [ ] classificação (sólido-líquido, líquido-líquido, gasoso-líquido)
-- [ ] concentração (molaridade, molalidade, fração molar)
-- [ ] diluição
-- [ ] colas e soluções coloidais
+## Química orgânica e indústria
+- [ ] compostos orgânicos e inorgânicos
+- [ ] isomeria e polaridade
+- [ ] funções orgânicas e nomenclatura
+- [ ] combustão e oxidação
+- [ ] polímeros e indústria petroquímica
+- [ ] obtenção e aplicações de hidrogênio, oxigênio, nitrogênio, cloro, hidróxido de sódio, amônia, óxido de cálcio, ácido clorídrico, ácido sulfúrico e ácido nítrico
 
-## Reações químicas
-- [ ] tipos de reação (de composição, decomposição, simples troca, dupla troca)
-- [ ] oxirredução (conceito, numberação de oxidação, método ion-eletrônico)
-- [ ] ácido-base (conceito de Arrhenius, Bronsted-Lowry)
-- [ ] pH e escala de pH
-- [ ] neutralização
-
-## Equilíbrio químico
-- [ ] conceito de equilíbrio dinâmico
-- [ ] constante de equilíbrio (Keq)
-- [ ] Princípio de Le Chatelier
-- [ ] equilíbrio ácido-base (constante Ka, Kb, pH de soluções)
-
-## Cinética química
-- [ ] velocidade de reação
-- [ ] fatores que afetam a velocidade (concentração, temperatura, catalisador)
-- [ ] energia de ativação
-
-## Química orgânica
-- [ ] cadeias carbônicas (lineares, ramificadas, cíclicas)
-- [ ] funções orgânicas (hidrocarbonetos, álcoois, ácidos, éteres, aldeídos, cetonas, ésteres, aminas)
-- [ ] nomenclatura IUPAC
-- [ ] isomeria
-- [ ] polimerização
-
-## Química e sociedade
-- [ ] combustíveis e fontes de energia
-- [ ] poluição do ar, água e solo
-- [ ] química verde e sustentabilidade
-- [ ] fármacos e química medicinal
-- [ ] alimentos: conservação e aditivos
+## Ambiente e qualidade de vida
+- [ ] ciclos do carbono, da água, do nitrogênio e do enxofre
+- [ ] chuva ácida e poluição atmosférica
+- [ ] agrotóxicos e poluição da água
+- [ ] tratamento de água, parâmetros de qualidade e oxigênio dissolvido
+- [ ] reatividade e toxicidade de compostos químicos
+- [ ] impactos da produção industrial e descarte de resíduos

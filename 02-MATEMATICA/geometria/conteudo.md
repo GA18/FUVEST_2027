@@ -1,38 +1,34 @@
-# Geometria
+# Matemática — geometria
 
 ## Geometria analítica
-- [ ] plano cartesiano e sistema de coordenadas
-- [ ] equação da reta (geral, reduzida, segmento)
-- [ ] interseção de retas, paralelismo e perpendicularidade
-- [ ] distância entre pontos e ponto médio
-- [ ] equação da circunferência (centro e raio)
-- [ ] reta tangente à circunferência
-- [ ] círculo trigonométrico (relação com trigonometria)
+- [ ] plano cartesiano e coordenadas de pontos
+- [ ] distância entre pontos
+- [ ] equações e interseções de retas
+- [ ] paralelismo e perpendicularidade
+- [ ] equação da circunferência
+- [ ] posições relativas entre retas e circunferências
 
-## Geometria plana
-- [ ] ângulos (classificação, soma, relações)
-- [ ] triângulos (classificação, soma dos ângulos, elementos)
-- [ ] congruência de triângulos (critérios LLL, LAA, ALA, etc.)
-- [ ] semelhança de triângulos (razão de semelhança, razão entre áreas e volumes)
-- [ ] Teorema de Tales
-- [ ] Teorema de Pitágoras
-- [ ] área de triângulos, paralelogramos, trapézios, círculos
-- [ ] polígonos regulares e seus elementos
-
-## Geometria espacial
-- [ ] sólidos geométricos (prismas, pirâmides, cilindro, cone, esfera)
-- [ ] arestas, vértices e faces
-- [ ] área lateral e área total
-- [ ] volume de prismas, pirâmides, cilindro, cone, esfera
-- [ ] planificação de sólidos
+## Geometria plana e transformações
+- [ ] retas, semirretas, segmentos, ângulos e setores circulares
+- [ ] polígonos: lados, diagonais, perímetro, área e convexidade
+- [ ] áreas por composição, decomposição e aproximação
+- [ ] congruência e semelhança de figuras
+- [ ] relações métricas em triângulos, polígonos regulares e círculos
+- [ ] teoremas relativos a triângulos e quadriláteros
+- [ ] pavimentações do plano
+- [ ] simetrias, translações, reflexões e rotações
+- [ ] homotetias e variação de perímetro, área e volume
 
 ## Trigonometria
-- [ ] relações trigonométricas no triângulo retângulo
-- [ ] arcos e senos de arcos notáveis (0°, 30°, 45°, 60°, 90°)
-- [ ] fórmulas de adição e duplicação
-- [ ] equações trigonométricas
+- [ ] seno, cosseno e tangente em triângulos
+- [ ] identidades trigonométricas
+- [ ] lei dos senos e lei dos cossenos
 
-## Transformações geométricas
-- [ ] translação, reflexão, rotação (isometria)
-- [ ] homotetia (ampliação/redução)
-- [ ] simetria central e axial
+## Geometria espacial
+- [ ] poliedros e corpos redondos
+- [ ] prismas, pirâmides e respectivos troncos
+- [ ] cilindro, cone, tronco de cone e esfera
+- [ ] áreas, volumes e capacidade
+- [ ] planificações de poliedros
+- [ ] inscrição e circunscrição de sólidos
+- [ ] vistas ortogonais de figuras espaciais

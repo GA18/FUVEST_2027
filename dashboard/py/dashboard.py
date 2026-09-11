@@ -23,19 +23,17 @@ HTML_PATH = DASHBOARD_DIR / "html" / "index.html"
 
 AREAS = {
     "01-LINGUAGENS": {
-        "nome": "Linguagens e Códigos",
+        "nome": "Linguagens e suas Tecnologias",
         "cor": "#e74c3c",
         "disciplinas": [
             ("portugues", "Português"),
-            ("literatura", "Literatura"),
             ("ingles", "Inglês"),
-            ("redacao", "Redação"),
             ("arte", "Arte"),
             ("educacao-fisica", "Educação Física"),
         ],
     },
     "02-MATEMATICA": {
-        "nome": "Matemática",
+        "nome": "Matemática e suas Tecnologias",
         "cor": "#3498db",
         "disciplinas": [
             ("algebra", "Álgebra"),
@@ -54,7 +52,7 @@ AREAS = {
         ],
     },
     "04-CIENCIAS-HUMANAS": {
-        "nome": "Ciências Humanas e Sociais",
+        "nome": "Ciências Humanas e Sociais Aplicadas",
         "cor": "#f39c12",
         "disciplinas": [
             ("historia", "História"),
@@ -161,7 +159,7 @@ def reset_checkboxes(area_id=None):
     for aid, area_info in AREAS.items():
         if area_id and area_id != aid:
             continue
-        for disc_id in area_info["disciplinas"]:
+        for disc_id, _ in area_info["disciplinas"]:
             path = disc_path(aid, disc_id)
             if not path.exists():
                 continue
@@ -193,7 +191,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
         if parsed.path == "/api/health":
             self._send(200, json.dumps({"ok": True}))
             return
-        # Servir arquivos de dashboard/html/
+        # Servir os arquivos públicos do dashboard.
         rel = urllib.parse.unquote(parsed.path.lstrip("/"))
         html_dir = DASHBOARD_DIR / "html"
         if rel in ("", "html"):
@@ -204,7 +202,13 @@ class DashboardHandler(BaseHTTPRequestHandler):
         if ".." in rel:
             self._send(403, "forbidden", "text/plain")
             return
-        f = html_dir / rel
+        if rel.startswith("html/"):
+            f = html_dir / rel.removeprefix("html/")
+        elif rel.startswith("css/"):
+            f = DASHBOARD_DIR / rel
+        else:
+            self._send(404, json.dumps({"error": "not found"}))
+            return
         if not f.is_file():
             self._send(404, json.dumps({"error": "not found"}))
             return
@@ -228,17 +232,24 @@ class DashboardHandler(BaseHTTPRequestHandler):
             return
         with self._write_lock:
             if parsed.path == "/api/reset":
-                n = reset_checkboxes(payload.get("area"))
+                area = payload.get("area")
+                if area is not None and area not in AREAS:
+                    self._send(400, json.dumps({"error": "unknown area"}))
+                    return
+                n = reset_checkboxes(area)
                 self._send(200, json.dumps({"reset_files": n}))
                 return
             area_id = payload.get("area")
             disc_id = payload.get("disc")
             index = payload.get("index")
-            checked = bool(payload.get("checked"))
+            checked = payload.get("checked")
             if area_id not in AREAS or disc_id not in {
                 d for d, _ in AREAS[area_id]["disciplinas"]
             }:
                 self._send(404, json.dumps({"error": "unknown disciplina"}))
+                return
+            if not isinstance(index, int) or isinstance(index, bool) or not isinstance(checked, bool):
+                self._send(400, json.dumps({"error": "invalid progress payload"}))
                 return
             result = set_checkbox(area_id, disc_id, index, checked)
             if result is None:
@@ -270,13 +281,14 @@ function showOfflineNote() {
 
 function buildInitialState() {
     const state = {};
+    const saved = loadProgress();
     let itemIdx = 0;
     for (const [areaId, area] of Object.entries(AREAS_DATA)) {
         for (const [discId, disc] of Object.entries(area.disciplinas)) {
             for (let i = 0; i < disc.total; i++) {
                 const key = discId + '_' + i;
                 const doneIdx = disc.doneFlags && disc.doneFlags.indexOf(i) >= 0;
-                state[key] = doneIdx;
+                state[key] = doneIdx || saved[key] === true;
                 itemIdx++;
             }
         }
@@ -341,14 +353,18 @@ function parseTopics(content) {
     let currentGroup = null;
     let inCodeBlock = false;
     let itemIdx = 0;
-    for (const line of lines) {
+        for (const line of lines) {
         if (line.startsWith('```')) { inCodeBlock = !inCodeBlock; continue; }
         if (inCodeBlock) continue;
         if (line.startsWith('### ') || line.startsWith('## ')) {
             const name = line.replace(/^#+\\s*/, '');
             currentGroup = { name: name, items: [] };
             groups.push(currentGroup);
-        } else if (currentGroup && line.match(/^- \\[([ x])\\]/)) {
+        } else if (line.match(/^- \\[([ x])\\]/)) {
+                if (!currentGroup) {
+                    currentGroup = { name: 'Geral', items: [] };
+                    groups.push(currentGroup);
+                }
             const text = line.replace(/^- \\[[ x]\\]\\s*/, '');
             const checked = line.indexOf('- [x]') === 0;
             currentGroup.items.push({ text: text, idx: itemIdx, checked: checked });
@@ -424,7 +440,10 @@ function toggleTopic(el) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ area: areaId, disc: discId, index: idx, checked: el.checked })
-        }).then(function(r) { return r.json(); }).then(function(res) {
+        }).then(function(r) {
+            if (!r.ok) throw new Error('progress request failed');
+            return r.json();
+        }).then(function(res) {
             if (res && typeof res.done === 'number') {
                 STATE[key] = el.checked;
                 const disc = AREAS_DATA[res.area].disciplinas[res.disc];
@@ -432,7 +451,11 @@ function toggleTopic(el) {
                 disc.total = res.total;
                 updateStats();
             }
-        }).catch(function() { offlineFallback(el, key); });
+        }).catch(function() {
+            el.checked = !el.checked;
+            el.closest('.topic-item').classList.toggle('done', el.checked);
+            showOfflineNote();
+        });
     } else {
         offlineFallback(el, key);
     }

@@ -1,36 +1,27 @@
-# Sociologia
+# Sociologia — objetos do Programa 2027
 
-## Temas centrais
-- [ ] sociedade (conceito, tipos, estrutura social)
-- [ ] desigualdades sociais (renda, gênero, raça, território)
-- [ ] trabalho (divisão social do trabalho, precarização, desemprego)
-- [ ] poder (dominação, autoridade, Estado)
-- [ ] cultura (valores, normas, diversidade cultural)
-- [ ] cidadania (direitos civis, políticos, sociais)
-- [ ] violência e segurança pública
-- [ ] movimentos sociais (sindicatos, partidos, ONGs)
-- [ ] comunicação e mídia (opinião pública, manipulação)
+## Sociedade e cultura
+- [ ] formas de vida humana, organização e transformação social
+- [ ] cultura, identidade, diversidade e alteridade
+- [ ] relações entre natureza, cultura, trabalho e tecnologia
+- [ ] corporalidade, gênero, sexualidade e afetividade
 
-## Conceitos fundamentais
-- [ ] fato social (Durkheim)
-- [ ] ação social e tipos de ação (Weber)
-- [ ] conflito social e luta de classes (Marx)
-- [ ] ethose classificação social (Ferreira Gullar, Florestan Fernandes)
-- [ ] alteridade e reconhecimento
+## Poder, política e cidadania
+- [ ] busca, controle e institucionalização do poder
+- [ ] Estado, autoridade, dominação e cidadania
+- [ ] democracia, direitos humanos e participação no debate público
+- [ ] violência física, simbólica e institucional
+- [ ] movimentos sociais, protagonismos e conflitos
 
-## Sociólogos e correntes essenciais
-- [ ] Émile Durkheim (fatos sociais, solidariedade orgânica e mecânica)
-- [ ] Max Weber (ação social, burocracia, ética protestante)
-- [ ] Karl Marx (classes sociais, mais-valia, alienação)
-- [ ] Peter Berger (sociologia como ciência)
-- [ ] Zygmunt Bauman (modernidade líquida)
-- [ ] Marilena Chauí (filosofia e sociologia)
-- [ ] Clóvis Moura (sociologia do Brasil)
-- [ ] Florestan Fernandes (sociologia e militância)
+## Trabalho e desigualdade
+- [ ] relações de produção, capital e trabalho
+- [ ] divisão social do trabalho e novas formas de trabalho
+- [ ] estratificação social, renda e desigualdades
+- [ ] desigualdades de classe, raça, gênero, território e geração
+- [ ] trabalho escravo, servil, assalariado, doméstico e informal
 
-## Leitura e interpretação
-- [ ] interpretação de textos sociológicos
-- [ ] análise de dados e estatísticas sociais
-- [ ] interpretação de charges, imagens e propagandas
-- [ ] relação entre teoria sociológica e realidade
-- [ ] comparação entre diferentes perspectivas teóricas
+## Ciência, tecnologia e informação
+- [ ] impactos das transformações técnicas, tecnológicas e informacionais
+- [ ] indústria cultural, consumo e sociedade do espetáculo
+- [ ] comunicação, mídia, redes sociais e opinião pública
+- [ ] pesquisa social, dados, estatísticas e interpretação de fontes
