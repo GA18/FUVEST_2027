@@ -105,10 +105,13 @@ def read_conteudo(area, disciplina):
 
 def read_resumo(area, disciplina):
     source_area, source_disc = CONTENT_PATHS.get((area, disciplina), (area, disciplina))
-    path = ROOT / source_area / source_disc / "resumo.txt"
-    if path.exists():
-        return path.read_text(encoding="utf-8")
-    return ""
+    root = ROOT / source_area / source_disc
+    geral = (root / "resumo.txt").read_text(encoding="utf-8") if (root / "resumo.txt").exists() else ""
+    temas = {
+        path.stem: path.read_text(encoding="utf-8")
+        for path in sorted((root / "resumos").glob("*.txt"))
+    } if (root / "resumos").exists() else {}
+    return {"geral": geral, "temas": temas}
 
 
 def build_data():
@@ -140,13 +143,14 @@ def disc_path(area_id, disc_id):
     return ROOT / source_area / source_disc / "conteudo.md"
 
 
-def resumo_path(area_id, disc_id):
+def resumo_path(area_id, disc_id, tema=None):
     source_area, source_disc = CONTENT_PATHS.get((area_id, disc_id), (area_id, disc_id))
-    return ROOT / source_area / source_disc / "resumo.txt"
+    root = ROOT / source_area / source_disc
+    return root / "resumo.txt" if tema in (None, "geral") else root / "resumos" / f"{tema}.txt"
 
 
-def save_resumo(area_id, disc_id, content):
-    path = resumo_path(area_id, disc_id)
+def save_resumo(area_id, disc_id, content, tema=None):
+    path = resumo_path(area_id, disc_id, tema)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
 
@@ -278,13 +282,14 @@ class DashboardHandler(BaseHTTPRequestHandler):
             disc_id = payload.get("disc")
             if parsed.path == "/api/resumo":
                 content = payload.get("content")
+                tema = payload.get("tema")
                 if area_id not in AREAS or disc_id not in {
                     d for d, _ in AREAS[area_id]["disciplinas"]
-                } or not isinstance(content, str):
+                } or not isinstance(content, str) or (tema is not None and not isinstance(tema, str)):
                     self._send(400, json.dumps({"error": "invalid resumo payload"}))
                     return
-                save_resumo(area_id, disc_id, content)
-                self._send(200, json.dumps({"area": area_id, "disc": disc_id, "saved": True}))
+                save_resumo(area_id, disc_id, content, tema)
+                self._send(200, json.dumps({"area": area_id, "disc": disc_id, "tema": tema, "saved": True}))
                 return
             index = payload.get("index")
             checked = payload.get("checked")
@@ -462,13 +467,18 @@ function buildChecklist() {
             }
             html += '</div>';
             html += '<div class="summary-view" id="summary-view-' + tabId + '" hidden>';
+            html += '<div class="summary-theme-list"><button class="summary-theme active" type="button" onclick="selectSummaryTheme(&quot;' + tabId + '&quot;,&quot;geral&quot;)">Resumo geral</button>';
+            for (const tema of Object.keys(disc.resumo.temas || {})) {
+                html += '<button class="summary-theme" type="button" onclick="selectSummaryTheme(&quot;' + tabId + '&quot;,&quot;' + tema + '&quot;)">' + tema.replace(/-/g, ' ') + '</button>';
+            }
+            html += '</div>';
             html += '<textarea class="summary-editor" id="summary-editor-' + tabId + '" spellcheck="true"></textarea>';
             html += '<div class="summary-actions"><span class="summary-status" id="summary-status-' + tabId + '"></span><button class="save-summary-btn" type="button" onclick="saveSummary(&quot;' + areaId + '&quot;,&quot;' + discId + '&quot;,&quot;' + tabId + '&quot;)">Salvar resumo</button></div>';
             html += '</div>';
             div.innerHTML = html;
             const editor = div.querySelector('.summary-editor');
             const savedSummaries = JSON.parse(localStorage.getItem('fuvest2027_summaries') || '{}');
-            editor.value = savedSummaries[areaId + '_' + discId] || disc.resumo || '';
+            editor.value = savedSummaries[areaId + '_' + discId] || disc.resumo.geral || '';
             contentsEl.appendChild(div);
 
             if (!firstTab) firstTab = tabId;
