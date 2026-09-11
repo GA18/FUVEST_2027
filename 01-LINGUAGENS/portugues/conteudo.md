@@ -8,6 +8,9 @@
 - [ ] identificação de tese, argumentos e contra-argumentos
 - [ ] relações lógico-discursivas (causa efeito, problema solução, comparação)
 - [ ] leitura crítica de textos em diferentes mídias
+- [ ] relação entre textos e discursos
+- [ ] aspectos éticos, estéticos, políticos e estilísticos em textos verbais e multissemióticos
+- [ ] funções da linguagem
 
 ## Coesão e coerência
 - [ ] coesão referencial (referência, substituição, elipse, repetição, sinônimo)
@@ -15,6 +18,8 @@
 - [ ] operadores lógicos e discursivos (mas, porém, além disso, portanto, ...)
 - [ ] progressão temática (tema e rema)
 - [ ] modalização (possibilidade, necessidade, certeza)
+- [ ] modalização epistêmica, deôntica e apreciativa
+- [ ] estratégias de impessoalização, incluindo terceira pessoa e voz passiva
 
 ## Gramática
 - [ ] classes de substantivos, adjetivos, advérbios, pronomes, verbos
@@ -34,6 +39,9 @@
 - [ ] denotação e conotação
 - [ ] polissemia e ambiguidade
 - [ ] antonímia, sinonímia, paronímia
+- [ ] efeitos de sentido da seleção, ordenação e combinação de palavras
+- [ ] intertextualidade e interdiscursividade
+- [ ] dialogia, citação, paráfrase, paródia e estilização
 
 ## Produção textual
 - [ ] estrutura dissertativa-argumentativa
@@ -42,3 +50,9 @@
 - [ ] coesão e articulação do texto
 - [ ] adequação ao gênero e à proposta
 - [ ] revisão ortográfica e gramatical
+- [ ] textualização e retextualização
+- [ ] variedades linguísticas e adequação ao contexto de produção, circulação e recepção
+- [ ] produção, circulação e recepção de textos de divulgação científica
+- [ ] organização tópico-discursiva e seleção de fontes fidedignas
+- [ ] resumo e resenha de textos de divulgação científica
+- [ ] leitura crítica de informação, dados, argumentos e fake news
