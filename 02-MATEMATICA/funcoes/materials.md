@@ -53,5 +53,5 @@ Autor: Munem
   - Banco de questões filtradas por tópico de funções de provas anteriores.
 
 ## Observação
-- Funções é um dos temas mais importantes para FUVEST, aparecendo em todas as fases.
+- Funções constam do Programa Oficial; a cobrança da segunda fase depende da carreira escolhida.
 - Estude todos os tipos: quadrática, exponencial, logarítmica, trigonométrica e modular.

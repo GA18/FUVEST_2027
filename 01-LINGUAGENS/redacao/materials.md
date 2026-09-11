@@ -1,7 +1,5 @@
 # Materiais - Redação
 
-# Materiais - Redação
-
 ## Fontes oficiais
 
 - Guia de Provas 2027, especialmente a seção de Redação e seus critérios de avaliação.

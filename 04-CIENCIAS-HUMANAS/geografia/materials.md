@@ -2,7 +2,7 @@
 
 ## YouTube
 
-### VESTIBULAR FUVEST 2026 | GEOGRAFIA
+### Material de apoio de Geografia
 Link: https://www.youtube.com/playlist?list=PLh-pzm2_vyyzMCI2J2lsyEqXBOWVtsuUo
 - Tipo: playlist
 - Conteúdo: Videoaulas de Geografia voltadas para o vestibular FUVEST, abrangendo temas como Globalização, Geografia do Brasil, Cartografia, Meio Ambiente

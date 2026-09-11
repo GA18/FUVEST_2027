@@ -23,9 +23,3 @@
 - [ ] uso consciente e ético de tecnologias
 - [ ] impacto das mídias sociais na representação dos corpos e das práticas corporais
 - [ ] consumo consciente de suplementos e tecnologias de saúde
-
-## Referências de Estudo
-- [ ] Brasil Escola - Educação Física
-- [ ] Toda Matéria - Educação Física
-- [ ] Livro "Educação Física - Volume Único" (Ceni, Coelho, Dilson)
-- [ ] Questões de vestibulares anteriores

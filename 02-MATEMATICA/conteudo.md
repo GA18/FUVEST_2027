@@ -7,7 +7,7 @@
 ### Álgebra
 → ver `algebra/conteudo.md`
 - Produtos notáveis, fatoração
-- Equações (1º, 2º, 3º grau)
+- Equações e inequações de primeiro e segundo graus
 - Sistemas de equações
 - Inequações
 - Progressões (PA e PG)

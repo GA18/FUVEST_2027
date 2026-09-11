@@ -26,7 +26,7 @@ Link: https://www.portugues.com.br
 - Conteúdo: Gramática completa (morfologia, sintaxe, semântica, pontuação, acentuação, ortografia), redação, literatura
 - Nível: Ensino Médio / vestibular
 - Gratuito: sim
-- Avaliação: Excelente site com todo conteúdo gramatical explicado de forma clara e com exemplos; cobre todos os tópicos do programa da FUVEST
+- Avaliação: recurso complementar de consulta; conferir cada tópico com o checklist e o Programa Oficial.
 
 ### Toda Matéria
 Link: https://www.todamateria.com.br

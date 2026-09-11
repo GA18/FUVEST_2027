@@ -18,7 +18,7 @@
 
 ```
 FUVEST_2027/
-├── 01-LINGUAGENS/          → Português, Inglês, Arte e Educação Física; literatura e redação são apoio da 2ª fase
+├── 01-LINGUAGENS/          → Português, Inglês, Arte e Educação Física
 │   ├── portugues/
 │   ├── literatura/
 │   ├── ingles/
@@ -42,6 +42,7 @@ FUVEST_2027/
 │   ├── geografia/
 │   ├── filosofia/
 │   └── sociologia/
+├── 05-SEGUNDA-FASE/         → apoio de Literatura e Redação
 ├── dashboard/               → dashboard de progresso
 │   ├── html/index.html
 │   ├── css/style.css
@@ -94,4 +95,5 @@ As subpastas `geometria/geometria-analitica/`, `geometria/geometria-plana/` e
 Os checklists das disciplinas são uma decomposição prática dos objetos de conhecimento
 do Programa do Vestibular 2027. O percentual do dashboard mede apenas os itens do
 checklist interno; não é uma nota oficial nem garante, sozinho, o domínio integral do programa.
-Literatura obrigatória e redação são mantidas no projeto como apoio específico da 2ª fase.
+Literatura obrigatória e redação são mantidas no projeto como apoio específico da 2ª fase
+e aparecem separadas no dashboard. Elas não são componentes adicionais da 1ª fase.

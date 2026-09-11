@@ -6,6 +6,8 @@
 - [ ] escolha de uma proposta e atendimento ao tipo e gênero solicitados
 - [ ] uso adequado da coletânea, sem cópia integral ou parcial
 - [ ] critérios: tema, autoria, modalidade textual, coesão, coerência e correção gramatical
+- [ ] pesos oficiais: tema, coletânea e autoria (3); modalidade textual (2); coesão, coerência e progressão (3); correção gramatical e adequação vocabular (2)
+- [ ] nota zero por fuga ao tema, descumprimento do tipo ou gênero, cópia da coletânea ou ausência de escolha da proposta
 
 ## Construção textual
 - [ ] identificar o tipo e o gênero solicitado antes de escrever

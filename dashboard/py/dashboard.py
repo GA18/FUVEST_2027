@@ -61,6 +61,19 @@ AREAS = {
             ("sociologia", "Sociologia"),
         ],
     },
+    "05-SEGUNDA-FASE": {
+        "nome": "Apoio da Segunda Fase",
+        "cor": "#8e44ad",
+        "disciplinas": [
+            ("literatura", "Literatura obrigatória"),
+            ("redacao", "Redação"),
+        ],
+    },
+}
+
+CONTENT_PATHS = {
+    ("05-SEGUNDA-FASE", "literatura"): ("01-LINGUAGENS", "literatura"),
+    ("05-SEGUNDA-FASE", "redacao"): ("01-LINGUAGENS", "redacao"),
 }
 
 
@@ -83,7 +96,8 @@ def done_indices(content):
 
 
 def read_conteudo(area, disciplina):
-    path = ROOT / area / disciplina / "conteudo.md"
+    source_area, source_disc = CONTENT_PATHS.get((area, disciplina), (area, disciplina))
+    path = ROOT / source_area / source_disc / "conteudo.md"
     if path.exists():
         return path.read_text(encoding="utf-8")
     return ""
@@ -113,7 +127,8 @@ def build_data():
 
 def disc_path(area_id, disc_id):
     """Caminho do conteudo.md de uma disciplina."""
-    return ROOT / area_id / disc_id / "conteudo.md"
+    source_area, source_disc = CONTENT_PATHS.get((area_id, disc_id), (area_id, disc_id))
+    return ROOT / source_area / source_disc / "conteudo.md"
 
 
 def find_checkbox_lines(text):

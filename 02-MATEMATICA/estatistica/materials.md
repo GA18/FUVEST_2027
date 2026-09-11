@@ -53,5 +53,5 @@ Autor: Munem
   - Banco de questões filtradas por tópico de estatística de provas anteriores.
 
 ## Observação
-- Estatística e probabilidade são conteúdos que aparecem em todas as fases da FUVEST.
+- Estatística e probabilidade constam do Programa Oficial; a cobrança da segunda fase depende da carreira escolhida.
 - Pratique bastante combinatória e interpretação de gráficos e tabelas.

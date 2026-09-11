@@ -26,9 +26,3 @@
 - [ ] ideias de beleza em diferentes culturas, tempos e espaços
 - [ ] sentidos da arte indígena e dos signos africanos em suas manifestações artísticas
 - [ ] multiculturalidade do Brasil nas estéticas do cotidiano
-
-## Referências de Estudo
-- [ ] Brasil Escola - Artes
-- [ ] Toda Matéria - Artes
-- [ ] Livro "História da Arte" de E.H. Gombrich
-- [ ] Questões de vestibulares anteriores

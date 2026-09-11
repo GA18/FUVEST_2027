@@ -53,5 +53,5 @@ Autor: Munem
   - Banco de questões filtradas por tópico de geometria de provas anteriores.
 
 ## Observação
-- Geometria aparece em todas as fases da FUVEST, com destaque para a segunda fase.
+- Geometria consta do Programa Oficial; a cobrança da segunda fase depende da carreira escolhida.
 - Estude geometria plana, espacial e analítica com bastante atenção.
